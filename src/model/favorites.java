@@ -1,6 +1,6 @@
 package model;
 
-public class favorites {
+public class favorites  implements  Comparable<favorites>{
 
     private String company_name;
     private float fav;
@@ -29,5 +29,21 @@ public class favorites {
 
     public void setQuestion_id(int question_id) {
         this.question_id = question_id;
+    }
+
+    @Override
+    public int compareTo(favorites outro) {
+
+        if(this.fav > outro.fav){
+
+            return -1;
+
+        }else if(this.fav < outro.fav){
+
+            return 1;
+
+        }
+
+        return 0;
     }
 }

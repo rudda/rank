@@ -97,6 +97,7 @@ public class rank {
         for (Map.Entry<Long,List<favorites>> pair : favs.entrySet()) {
 
             System.out.print(pair.getKey()+" ");
+            Collections.sort(pair.getValue());
 
             for(favorites f : pair.getValue()){
 
